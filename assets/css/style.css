@@ -610,6 +610,62 @@ body.nav-active { overflow: hidden; }
 
 .listing-card .card-text { color: var(--midnight-green); }
 
+.listing-card { align-items: center; }
+
+
+
+/*-----------------------------------*\
+  #HOME (Emmanuel content)
+\*-----------------------------------*/
+
+.hero-role {
+  color: var(--white);
+  margin-block-end: 30px;
+}
+
+.hero .wrapper .btn {
+  justify-content: center;
+  margin-block-start: 0;
+}
+
+.hero .wrapper .btn + .btn { margin-block-start: 12px; }
+
+.service-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.service-card .card-icon ion-icon,
+.listing-card .card-icon ion-icon {
+  display: block;
+  color: var(--verdigris);
+}
+
+.service-card .card-icon ion-icon { font-size: 7.1rem; }
+
+.listing-card .card-icon ion-icon { font-size: 4rem; }
+
+.quote-card {
+  max-width: 900px;
+  margin-inline: auto;
+  padding: 50px 36px;
+  background-color: var(--white);
+  border: 2px solid var(--alice-blue);
+  border-radius: var(--radius-12);
+  color: var(--midnight-green);
+}
+
+.quote-author {
+  color: var(--verdigris);
+  margin-block-start: 20px;
+}
+
+@media (min-width: 768px) {
+  .hero .wrapper .btn + .btn { margin-block-start: 0; }
+}
+
 
 
 
@@ -1651,8 +1707,37 @@ body.nav-active { overflow: hidden; }
   
   #contact-details .map iframe {
   width: 100%;
-  height: 50rem; 
-  border: .1rem solid #ddd; 
+  height: 50rem;
+  border: .1rem solid #ddd;
+  }
+
+  /* contact page: details beside the form */
+  #contact-details {
+  max-width: 1200px;
+  margin-inline: auto;
+  align-items: flex-start;
+  gap: 3rem;
+  line-height: 1.6;
+  }
+
+  #contact-details .details div { align-items: center; }
+
+  #contact-details .details i {
+  flex-shrink: 0;
+  width: 2.6rem;
+  text-align: center;
+  }
+
+  #contact-details .details p a { display: inline; }
+
+  #contact-details .contact-form textarea {
+  min-height: 15rem;
+  resize: vertical;
+  }
+
+  @media (max-width: 992px) {
+  #contact-details .details,
+  #contact-details .contact-form { width: 100%; }
   }
  /*-----------------------------------*\
   contact  form Details
@@ -1693,6 +1778,7 @@ body.nav-active { overflow: hidden; }
   }
   
   .contact-form form input,
+  .contact-form form select,
   .contact-form form textarea {
   width: 100%;
   padding: 1rem;
@@ -1892,8 +1978,9 @@ padding: 0rem;
 #contact-form span,
 .contact-form h3,
 .contact-form form input,
+.contact-form form select,
 .contact-form form textarea {
-  font-size: 1rem; 
+  font-size: 1rem;
 }
 #contact-details .map iframe {
   height: 15rem;
@@ -2228,4 +2315,10 @@ Product */
 .next-page {
   font-size: 1.5rem;
   vertical-align: middle;
+}
+
+
+/* home: organisations heading spans the full row */
+@media (min-width: 1200px) {
+  .listing .grid-list > li:first-child { grid-column: 1 / -1; }
 }
