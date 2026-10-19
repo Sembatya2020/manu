@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact</title>
-  <meta name="title" content="Doclab - home">
-  <meta name="description" content="This is a medical html template made by muhammad Zahid">
+  <title>Emmanuel Karisa Baya - contact</title>
+  <meta name="title" content="Emmanuel Karisa Baya - contact">
+  <meta name="description" content="Contact Emmanuel Karisa Baya for classes, facilitation, coaching, community development consulting and Marafa Ward matters.">
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <!-- 
@@ -63,14 +63,14 @@
     <div class="container">
 
       <a href="#" class="logo" style="font-size: larger;">
-        <img src="./assets/images/ZARA_LOGO_with_Text.png" style=" width: max(12vw,100px);"alt="Zara">
+        <img src="./assets/images/ZARA_LOGO_with_Text.png" style=" width: max(12vw,100px);"alt="Emmanuel Karisa Baya home">
       </a>
       <nav class="navbar" data-navbar>
 
         <div class="navbar-top">
 
           <a href="#" class="logo">
-            <img src="./assets/images/ZARA_LOGO_with_Text.png" width="136" height="46" alt="Doclab home">
+            <img src="./assets/images/ZARA_LOGO_with_Text.png" width="136" height="46" alt="Emmanuel Karisa Baya home">
           </a>
 
           <button class="nav-close-btn" aria-label="clsoe menu" data-nav-toggler>
@@ -93,12 +93,9 @@
             <a href="service.html" class="navbar-link title-md">Services</a>
           </li>
           <li class="navbar-item">
-            <a href="product.html" class="navbar-link title-md">Product</a>
+            <a href="classes.html" class="navbar-link title-md">Classes</a>
           </li>
 
-          <li class="navbar-item">
-            <a href="doctors.html" class="navbar-link title-md">Doctors</a>
-          </li>
 
           <li class="navbar-item">
             <a href="conntact.html" class="navbar-link title-md">Contact Us</a>
@@ -147,7 +144,7 @@
   <main>
     <article>
 
-      <!-- 
+      <!--
         - #HERO
       -->
       <section class="section hero contact" style="background-image: url('./assets/images/hero-bg.png')" aria-label="contact">
@@ -163,9 +160,23 @@
 
                 <div class="hero-card" data-reveal="left">
 
+                    <!-- TODO: confirm reply time ("two working days") -->
                     <p class="title-lg card-text">
-                        Tell me about your group, your community or your question. I work in person across Kenya and online with clients worldwide.
+                        Whether you are planning a community dialogue, looking for a facilitator, interested in a class or need support as a leader, I would be glad to hear from you. Tell me about your group, your community or your question, and I will reply within two working days.
                     </p>
+
+                    <p class="hero-card-note">I work in person across Kenya and online with clients worldwide.</p>
+
+                    <div class="wrapper">
+                        <a href="#send-message" class="btn has-before">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <span class="span title-md">Send a message</span>
+                        </a>
+                        <a href="https://wa.me/254710350828" target="_blank" rel="noopener" class="btn has-before">
+                            <ion-icon name="logo-whatsapp"></ion-icon>
+                            <span class="span title-md">WhatsApp me</span>
+                        </a>
+                    </div>
 
                 </div>
 
@@ -180,58 +191,238 @@
 
 
 
-      <section id="contact-details" class="section-p1" data-wow-delay="0.5s" data-wow-duration="1s">
-        <div class="details wow animate__animated animate__fadeInLeft">
-            <div>
-                <i class="fas fa-phone"></i>
-                <p>Phone and WhatsApp: <a href="tel:+254710350828">+254 710 350 828</a></p>
-            </div>
+      <!--
+        - #GET IN TOUCH / VISIT THE OFFICE
+      -->
 
-            <div>
-                <i class="far fa-envelope"></i>
-                <p>Email: <a href="mailto:magarini.centre@gmail.com">magarini.centre@gmail.com</a></p>
-            </div>
+      <section class="service" aria-label="contact details">
+        <div class="container">
+          <ul class="service-list contact-cards">
 
-            <div>
-                <i class="fas fa-map-marker-alt"></i>
-                <p>Office: Marafa Town, Magarini, Kilifi County, Kenya</p>
-            </div>
+            <li>
+              <div class="service-card" data-reveal="bottom">
+                <div class="card-icon">
+                  <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+                </div>
+                <h2 class="headline-sm card-title">Get in touch</h2>
+                <!-- TODO: optional professional address such as info@emmanuelbaya.com -->
+                <ul class="contact-lines">
+                  <li><strong>Phone and WhatsApp</strong><a href="tel:+254710350828">+254 710 350 828</a></li>
+                  <li><strong>Email</strong><a href="mailto:magarini.centre@gmail.com">magarini.centre@gmail.com</a></li>
+                </ul>
+              </div>
+            </li>
 
-            <div>
-                <i class="fas fa-envelope-open-text"></i>
-                <p>Postal address: P.O. Box 8-80207, Madina, Malindi</p>
-            </div>
+            <li>
+              <div class="service-card" data-reveal="bottom">
+                <div class="card-icon">
+                  <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+                </div>
+                <h2 class="headline-sm card-title">Visit the office</h2>
+                <ul class="contact-lines">
+                  <li><strong>Office</strong>Marafa Town, Magarini, Kilifi County, Kenya</li>
+                  <!-- TODO: office hours (days and times) -->
+                </ul>
+                <p class="card-text">Please call or send a WhatsApp message before visiting, to make sure I am available.</p>
+              </div>
+            </li>
 
-            <div>
-                <i class="fas fa-share-alt"></i>
-                <!-- TODO: add YouTube link -->
-                <p>Social media: <a href="https://ke.linkedin.com/in/emmanuel-baya-53429bab" target="_blank" rel="noopener">LinkedIn</a>, <a href="https://web.facebook.com/emmanuel.k.baya" target="_blank" rel="noopener">Facebook</a>, <a href="#">YouTube</a></p>
-            </div>
+            <li>
+              <div class="service-card" data-reveal="bottom">
+                <div class="card-icon">
+                  <ion-icon name="mail-open-outline" aria-hidden="true"></ion-icon>
+                </div>
+                <h2 class="headline-sm card-title">Postal address</h2>
+                <ul class="contact-lines">
+                  <li>P.O. Box 8-80207<br>Madina, Malindi, Kenya</li>
+                </ul>
+              </div>
+            </li>
 
+          </ul>
         </div>
+      </section>
 
-        <div id="form-details" class="contact-form wow animate__animated animate__fadeInUp">
-            <form id="contact-form">
-                <input type="text" id="name" placeholder="Your name">
-                <input type="email" id="email" placeholder="Email">
-                <input type="text" id="organisation" placeholder="Organisation (optional)">
-                <select id="interest">
-                    <option value="" disabled selected>I'm interested in</option>
+
+
+
+      <!--
+        - #SEND A MESSAGE
+      -->
+
+      <section class="section" id="send-message" aria-labelledby="message-label">
+        <div class="container message-grid">
+
+          <div class="details-card message-card" data-reveal="left">
+            <p class="section-subtitle title-lg has-after">Send a message</p>
+            <h2 class="headline-md" id="message-label">Tell me how I can help</h2>
+
+            <form class="message-form" data-message-form>
+              <div class="form-row">
+                <label>Your name
+                  <input type="text" name="name" required autocomplete="name">
+                </label>
+                <label>Email address
+                  <input type="email" name="email" required autocomplete="email">
+                </label>
+              </div>
+              <div class="form-row">
+                <label><span>Phone or WhatsApp <span class="optional">(optional)</span></span>
+                  <input type="tel" name="phone" autocomplete="tel">
+                </label>
+                <label><span>Organisation <span class="optional">(optional)</span></span>
+                  <input type="text" name="organisation" autocomplete="organization">
+                </label>
+              </div>
+              <div class="form-row">
+                <label><span>Country or county <span class="optional">(optional)</span></span>
+                  <input type="text" name="location" autocomplete="country-name">
+                </label>
+                <label>I'm interested in
+                  <select name="interest" required>
+                    <option value="" disabled selected>Choose one</option>
                     <option>An online class</option>
-                    <option>Group facilitation</option>
+                    <option>Large group facilitation</option>
+                    <option>Small group or team facilitation</option>
                     <option>Coaching</option>
                     <option>Community development consulting</option>
+                    <option>Speaking or training invitation</option>
                     <option>Marafa Ward matters</option>
                     <option>Something else</option>
-                </select>
-                <textarea id="message" placeholder="Message"></textarea>
-                <button id="submit-button" type="submit">Send</button>
+                  </select>
+                </label>
+              </div>
+              <label>Your message
+                <textarea name="message" required></textarea>
+              </label>
+              <button type="submit" class="btn has-before">
+                <ion-icon name="send-outline"></ion-icon>
+                <span class="span title-md">Send message</span>
+              </button>
             </form>
+
+            <!-- TODO: confirm reply time ("two working days") -->
+            <div class="form-thanks" role="status" data-message-thanks hidden>
+              <ion-icon name="checkmark-circle-outline" aria-hidden="true"></ion-icon>
+              <p>Thank you for getting in touch. I will reply within two working days. For urgent matters, please call or send a WhatsApp message.</p>
+            </div>
+          </div>
+
+          <div class="message-aside">
+
+            <div class="details-card" data-reveal="right">
+              <div class="card-icon"><ion-icon name="business-outline" aria-hidden="true"></ion-icon></div>
+              <h2 class="headline-sm">For organisations</h2>
+              <p>If you are booking facilitation or training for a group, it helps to include:</p>
+              <ul class="ward-list">
+                <li class="about-item"><ion-icon name="checkmark-circle-outline"></ion-icon><span class="span">The name of your organisation</span></li>
+                <li class="about-item"><ion-icon name="checkmark-circle-outline"></ion-icon><span class="span">The size of the group</span></li>
+                <li class="about-item"><ion-icon name="checkmark-circle-outline"></ion-icon><span class="span">The purpose or challenge you are facing</span></li>
+                <li class="about-item"><ion-icon name="checkmark-circle-outline"></ion-icon><span class="span">Your preferred dates and location, or whether it will be online</span></li>
+              </ul>
+            </div>
+
+            <div class="details-card healing-card" data-reveal="right">
+              <div class="card-icon"><ion-icon name="flag-outline" aria-hidden="true"></ion-icon></div>
+              <h2 class="headline-sm">For Marafa Ward residents</h2>
+              <!-- TODO: ward office phone and location, if different -->
+              <p>For matters concerning Marafa Ward and county services, please contact the ward office directly.</p>
+            </div>
+
+          </div>
+
         </div>
-    </section>
+      </section>
+
+
+
+
+      <!--
+        - #FOLLOW MY WORK
+      -->
+
+      <section class="section listing" aria-labelledby="follow-label">
+        <div class="container follow-grid">
+
+          <div data-reveal="left">
+            <p class="section-subtitle title-lg has-after">Follow my work</p>
+            <h2 class="headline-md" id="follow-label">Stay connected</h2>
+            <!-- TODO: YouTube link; WhatsApp channel link, if created -->
+            <ul class="follow-links">
+              <li>
+                <a href="https://ke.linkedin.com/in/emmanuel-baya-53429bab" target="_blank" rel="noopener" class="follow-link">
+                  <ion-icon name="logo-linkedin" aria-hidden="true"></ion-icon> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="https://web.facebook.com/emmanuel.k.baya" target="_blank" rel="noopener" class="follow-link">
+                  <ion-icon name="logo-facebook" aria-hidden="true"></ion-icon> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="https://wa.me/254710350828" target="_blank" rel="noopener" class="follow-link">
+                  <ion-icon name="logo-whatsapp" aria-hidden="true"></ion-icon> WhatsApp
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="details-card" data-reveal="right">
+            <h2 class="headline-sm">Join my mailing list</h2>
+            <p>Join my mailing list for class dates, free introductory sessions and reflections on facilitation and community work.</p>
+            <form class="subscribe-form" data-subscribe-form>
+              <label class="visually-hidden" for="subscribe-email">Email address</label>
+              <input type="email" id="subscribe-email" name="email" placeholder="Email address" required autocomplete="email">
+              <button type="submit" class="btn has-before">
+                <span class="span title-md">Subscribe</span>
+              </button>
+            </form>
+            <p class="form-thanks-inline" role="status" data-subscribe-thanks hidden>Thank you. Please send the email that opened to finish subscribing.</p>
+          </div>
+
+        </div>
+      </section>
 
     </article>
   </main>
+
+  <script>
+    // Forms open the visitor's email app with the details filled in (no server needed)
+    (function () {
+      var TO = "magarini.centre@gmail.com";
+
+      var form = document.querySelector("[data-message-form]");
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        var d = new FormData(form);
+        var lines = [
+          "Name: " + d.get("name"),
+          "Email: " + d.get("email"),
+          "Phone or WhatsApp: " + (d.get("phone") || "-"),
+          "Organisation: " + (d.get("organisation") || "-"),
+          "Country or county: " + (d.get("location") || "-"),
+          "Interested in: " + d.get("interest"),
+          "",
+          d.get("message")
+        ];
+        window.location.href = "mailto:" + TO +
+          "?subject=" + encodeURIComponent("Website enquiry: " + d.get("interest")) +
+          "&body=" + encodeURIComponent(lines.join("\n"));
+        form.hidden = true;
+        document.querySelector("[data-message-thanks]").hidden = false;
+      });
+
+      var sub = document.querySelector("[data-subscribe-form]");
+      sub.addEventListener("submit", function (event) {
+        event.preventDefault();
+        var email = new FormData(sub).get("email");
+        window.location.href = "mailto:" + TO +
+          "?subject=" + encodeURIComponent("Mailing list") +
+          "&body=" + encodeURIComponent("Please add me to your mailing list: " + email);
+        document.querySelector("[data-subscribe-thanks]").hidden = false;
+      });
+    })();
+  </script>
 
 
 
@@ -246,7 +437,7 @@
       <div class="section footer-top">
         <div class="footer-brand" data-reveal="bottom">
           <a href="#" class="logo">
-            <img src="./assets/images/ZARA_LOGO_with_Text.png" width="136" height="46" loading="lazy" alt="Therapist Home">
+            <img src="./assets/images/ZARA_LOGO_with_Text.png" width="136" height="46" loading="lazy" alt="Emmanuel Karisa Baya home">
           </a>
           <ul class="contact-list has-after">
             <li class="contact-item">
@@ -286,7 +477,7 @@
         <div class="footer-list" data-reveal="bottom">
           <p class="headline-sm footer-list-title">Postal address</p>
           <p class="text">
-            P.O. Box 8-80207, Madina, Malindi
+            P.O. Box 8-80207, Madina, Malindi, Kenya
           </p>
         </div>
         <ul class="footer-list" data-reveal="bottom">
@@ -307,7 +498,8 @@
       </div>
       <div class="footer-bottom">
         <p class="text copyright">
-          &copy; 2026 Emmanuel Karisa Baya · Marafa, Kilifi County · Processwork · Facilitation · Community leadership
+          &copy; 2026 Emmanuel Karisa Baya · Marafa, Kilifi County, Kenya<br>
+          Processwork · Facilitation · Community leadership
         </p>
         <ul class="social-list">
 
