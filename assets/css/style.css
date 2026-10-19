@@ -2869,3 +2869,188 @@ Product */
 @media (min-width: 992px) {
   .intro-strip { grid-template-columns: max-content 1fr max-content; gap: 40px; }
 }
+
+
+/*-----------------------------------*\
+  #APPOINTMENT PAGE (Emmanuel content)
+\*-----------------------------------*/
+
+.booking-form { gap: 28px; }
+
+.booking-step {
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+
+.step-legend {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  float: left;
+  width: 100%;
+  margin-block-end: 5px;
+}
+
+.step-legend + * { clear: both; }
+
+.field-title {
+  color: var(--midnight-green);
+  font-weight: var(--fw-500);
+  margin-block-end: -8px;
+}
+
+.field-hint {
+  color: var(--midnight-green);
+  font-weight: 400;
+}
+
+.choice-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.message-form label.choice {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid var(--middle-blue-green_40);
+  border-radius: var(--radius-6);
+  background-color: var(--white);
+  font-weight: 400;
+  cursor: pointer;
+  transition: var(--transition-1);
+}
+
+.message-form label.choice:has(input:checked) {
+  border-color: var(--verdigris);
+  background-color: var(--alice-blue);
+}
+
+.message-form .choice input,
+.message-form .check-label input {
+  width: auto;
+  flex-shrink: 0;
+  accent-color: var(--verdigris);
+}
+
+.choice-sub {
+  display: block;
+  font-size: 1.3rem;
+  color: var(--midnight-green);
+}
+
+.message-form label.check-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.message-form .check-label input { margin-block-start: 4px; }
+
+.group-fields {
+  display: grid;
+  gap: 18px;
+  padding: 20px;
+  border-radius: var(--radius-12);
+  background-color: var(--alice-blue);
+}
+
+.was-validated :invalid {
+  border-color: hsl(0, 70%, 50%);
+}
+
+.form-error {
+  color: hsl(0, 70%, 45%);
+  font-weight: var(--fw-500);
+}
+
+.booking-thanks h2 { margin-block-end: 8px; }
+
+.booking-thanks p { margin-block-end: 8px; }
+
+.booking-aside .card-icon ion-icon {
+  display: block;
+  font-size: 4rem;
+  color: var(--verdigris);
+  margin-block-end: 10px;
+}
+
+@media (min-width: 768px) {
+  .choice-grid { grid-template-columns: 1fr 1fr; }
+
+  .choice-grid-3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 992px) {
+  .booking-aside {
+    position: sticky;
+    top: 120px;
+  }
+}
+
+
+/* appointment hero: keep the portrait image's shape and sit it on the right */
+.appointment-banner img {
+  width: auto;
+  height: 480px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+@media (min-width: 992px) {
+  .hero .container > .appointment-banner { justify-self: end; }
+}
+
+
+/*-----------------------------------*\
+  #BRAND LOGO (Emmanuel Baya · Kila Sauti · Every Voice)
+\*-----------------------------------*/
+
+.logo.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-mark {
+  display: block;
+  width: 68px;
+  height: 68px;
+  flex-shrink: 0;
+}
+
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-name {
+  color: var(--white);
+  font-family: var(--ff-oswald);
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.brand-tag {
+  color: hsl(197, 79%, 65%); /* same light blue as the logo globe */
+  font-size: 1.1rem;
+  font-weight: var(--fw-700);
+  letter-spacing: 1.5px;
+  margin-block-start: 3px;
+}
+
+.footer .brand-mark {
+  width: 80px;
+  height: 80px;
+}

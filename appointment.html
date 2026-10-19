@@ -9,15 +9,15 @@
   <!-- 
     - primary meta tags
   -->
-  <title>Zara Therapy  - appointment</title>
-  <meta name="title" content="Doclab - home">
-  <meta name="description" content="This is a medical html template made by muhammad Zahid">
+  <title>Emmanuel Karisa Baya - book an appointment</title>
+  <meta name="title" content="Emmanuel Karisa Baya - book an appointment">
+  <meta name="description" content="Book a class, coaching session, facilitation meeting or a free introductory call with Emmanuel Karisa Baya.">
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <!-- 
     - favicon
   -->
-  <link rel="shortcut icon" href="./assets/images/ZARA_LOGO.png" type="image/svg+xml">
+  <link rel="shortcut icon" href="./assets/images/emmanuel-baya-logo.png" type="image/png">
 
   <!-- 
     - google font link
@@ -61,15 +61,23 @@
   <header class="header" data-header>
     <div class="container">
 
-      <a href="#" class="logo" style="font-size: larger;">
-        <img src="./assets/images/ZARA_LOGO_with_Text.png" style=" width: max(12vw,100px);"alt="Emmanuel Karisa Baya home">
+      <a href="index.html" class="logo brand" aria-label="Emmanuel Baya, Kila Sauti, Every Voice: home">
+        <span class="brand-mark"><img src="./assets/images/emmanuel-baya-logo-light.png" width="52" height="52" alt=""></span>
+        <span class="brand-text">
+          <span class="brand-name">Emmanuel Baya</span>
+          <span class="brand-tag">KILA SAUTI · EVERY VOICE</span>
+        </span>
       </a>
       <nav class="navbar" data-navbar>
 
         <div class="navbar-top">
 
-          <a href="#" class="logo">
-            <img src="./assets/images/ZARA_LOGO_with_Text.png" width="136" height="46" alt="Emmanuel Karisa Baya home">
+          <a href="index.html" class="logo brand" aria-label="Emmanuel Baya, Kila Sauti, Every Voice: home">
+            <span class="brand-mark"><img src="./assets/images/emmanuel-baya-logo-light.png" width="52" height="52" alt=""></span>
+            <span class="brand-text">
+              <span class="brand-name">Emmanuel Baya</span>
+              <span class="brand-tag">KILA SAUTI · EVERY VOICE</span>
+            </span>
           </a>
 
           <button class="nav-close-btn" aria-label="clsoe menu" data-nav-toggler>
@@ -143,140 +151,375 @@
   <main>
     <article>
 
-      <!-- 
+      <!--
         - #HERO
       -->
 
-      <section class="section hero" style="background-image: url('./assets/images/hero-bg.png')" aria-label="home">
+      <section class="section hero" style="background-image: url('./assets/images/hero-bg.png')" aria-label="book an appointment">
         <div class="container">
 
           <div class="hero-content">
 
-            <p class="hero-subtitle has-before" data-reveal="left">Welcome To  Zara Therapy</p>
+            <p class="hero-subtitle has-before" data-reveal="left">Book an appointment</p>
 
             <h1 class="headline-lg hero-title" data-reveal="left">
-              Get Your Appointment<br>
+              Let's find a time to talk
             </h1>
 
             <div class="hero-card" data-reveal="left">
 
+              <!-- TODO: confirm reply time ("two working days") -->
               <p class="title-lg card-text">
-                Search doctors. clinics. hospitals. etc.
+                Book a class, a coaching session, a facilitation meeting or a first conversation with Emmanuel. Fill in the form below and you will receive a reply within two working days to confirm your date and time.
               </p>
 
+              <p class="hero-card-note">All times are in East Africa Time (EAT, UTC+3).</p>
+
               <div class="wrapper">
-
-                <div class="input-wrapper title-lg">
-                  <input type="text" name="location" placeholder="Locations" class="input-field">
-
-                  <ion-icon name="location"></ion-icon>
-                </div>
-
-                <button class="btn has-before">
-                  <ion-icon name="search"></ion-icon>
-
-                  <span class="span title-md">Find Now</span>
-                </button>
-
+                <a href="#booking" class="btn has-before">
+                  <ion-icon name="calendar-outline"></ion-icon>
+                  <span class="span title-md">Start booking</span>
+                </a>
+                <a href="https://wa.me/254710350828" target="_blank" rel="noopener" class="btn has-before">
+                  <ion-icon name="logo-whatsapp"></ion-icon>
+                  <span class="span title-md">WhatsApp me</span>
+                </a>
               </div>
 
             </div>
 
           </div>
 
-          <figure class="hero-banner" data-reveal="right">
-            <img src="./assets/images/appoinment-removebg-preview.png" width="590" height="517" loading="eager" alt="hero banner" style="padding-left: 250px;"
-              class="w-100">
+          <figure class="hero-banner appointment-banner" data-reveal="right">
+            <img src="./assets/images/appoinment-removebg-preview.png" width="260" height="440" loading="eager" alt="hero banner">
           </figure>
 
         </div>
       </section>
-      
 
-      <!-- booking section starts   -->
 
-<section class="book" id="book">
 
-    <h1 class="heading">Appointment</h1>    
 
-    <div class="row">
+      <!--
+        - #BOOKING FORM
+      -->
 
-        <div class="image">
-            <img src="./assets/images/book-img.svg" alt="">
-        </div>
+      <section class="section listing" id="booking" aria-label="booking form">
+        <div class="container message-grid">
 
-        <form action="">
-            <h3>book appointment</h3>
-            <input type="text" placeholder="your name" class="box">
-            <input type="number" placeholder="your number" class="box">
-            <input type="email" placeholder="your email" class="box">
-            <input type="date" class="box">
-            <input type="submit" value="book now" class="btn">
-        </form>
+          <div class="booking-main">
 
-    </div>
+            <form class="message-form booking-form" data-booking-form novalidate>
 
-</section>
+              <!-- STEP 1 -->
+              <fieldset class="details-card booking-step">
+                <legend class="step-legend"><span class="step-number">1</span><span class="headline-sm">What would you like to book?</span></legend>
+                <label>Type of appointment
+                  <select name="type" required data-booking-type>
+                    <option value="" disabled selected>Choose one</option>
+                    <option>Free 20-minute introductory call</option>
+                    <option>Class registration</option>
+                    <option>Coaching session</option>
+                    <option>Facilitation (large group)</option>
+                    <option>Facilitation (small group or team)</option>
+                    <option>Community development consulting</option>
+                    <option>Speaking or training invitation</option>
+                    <option>Private class for my organisation</option>
+                    <option>Other</option>
+                  </select>
+                </label>
+              </fieldset>
 
-<!-- booking section ends -->
+              <!-- STEP 2 (classes only) -->
+              <fieldset class="details-card booking-step" data-step-class hidden disabled>
+                <legend class="step-legend"><span class="step-number">2</span><span class="headline-sm">Choose a class</span></legend>
+                <label>Class
+                  <select name="class" required data-class-select>
+                    <option value="" disabled selected>Choose a class</option>
+                    <optgroup label="Track 1: Processwork and Psychology">
+                      <option>Processwork-Oriented Psychology</option>
+                      <option>Deep Democracy in Practice</option>
+                      <option>Healing History</option>
+                    </optgroup>
+                    <optgroup label="Track 2: Leadership and Facilitation">
+                      <option>Leadership</option>
+                      <option>Large Group Facilitation</option>
+                      <option>Small Group Facilitation</option>
+                      <option>Conflict Resolution and Worldwork</option>
+                      <option>Conscious Use of Power and Rank</option>
+                      <option>Peacebuilding for Community Leaders</option>
+                    </optgroup>
+                    <optgroup label="Track 3: Community Development">
+                      <option>Community Building</option>
+                      <option>Community Mobilization and Organising</option>
+                      <option>Resource Mobilization</option>
+                      <option>Civic Education and Public Participation</option>
+                      <option>Organic Farming and Sustainable Agriculture (in person, Marafa)</option>
+                      <option>Rural Leadership</option>
+                    </optgroup>
+                  </select>
+                </label>
+                <label class="check-label">
+                  <input type="checkbox" name="class_unsure" data-class-unsure>
+                  <span>Not sure which class? Tick here and Emmanuel will advise you.</span>
+                </label>
+              </fieldset>
 
-<!-- review section starts  -->
+              <!-- STEP 3 -->
+              <fieldset class="details-card booking-step">
+                <legend class="step-legend"><span class="step-number">3</span><span class="headline-sm">How and when</span></legend>
 
-<section class="review" id="review">
-    
-    <h1 class="heading"><span>review</span> </h1>
+                <p class="field-title">How would you like to meet?</p>
+                <div class="choice-grid">
+                  <label class="choice"><input type="radio" name="meet" value="Online (Zoom)" required><span>Online (Zoom)</span></label>
+                  <label class="choice"><input type="radio" name="meet" value="Phone or WhatsApp call"><span>Phone or WhatsApp call</span></label>
+                  <label class="choice"><input type="radio" name="meet" value="In person at the Marafa office"><span>In person at the Marafa office</span></label>
+                  <label class="choice"><input type="radio" name="meet" value="In person at my location"><span>In person at my location <span class="optional">(facilitation and training only)</span></span></label>
+                </div>
 
-    <div class="box-container">
+                <div class="form-row">
+                  <label>Preferred date
+                    <input type="date" name="date" required data-date>
+                  </label>
+                  <label><span>Alternative date <span class="optional">(optional)</span></span>
+                    <input type="date" name="date_alt" data-date>
+                  </label>
+                </div>
 
-        <div class="box">
-            <img src="./assets/images/pic-1.png" alt="1">
-            <h3>Ravi Goel</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
+                <p class="field-title">Preferred time</p>
+                <div class="choice-grid choice-grid-3">
+                  <label class="choice"><input type="radio" name="time" value="Morning (8:00 am to 12:00 pm EAT)" required><span>Morning<span class="choice-sub">8:00 am to 12:00 pm EAT</span></span></label>
+                  <label class="choice"><input type="radio" name="time" value="Afternoon (12:00 pm to 4:00 pm EAT)"><span>Afternoon<span class="choice-sub">12:00 pm to 4:00 pm EAT</span></span></label>
+                  <label class="choice"><input type="radio" name="time" value="Evening (4:00 pm to 7:00 pm EAT)"><span>Evening<span class="choice-sub">4:00 pm to 7:00 pm EAT</span></span></label>
+                </div>
+
+                <label><span>If you are outside Kenya, your country and time zone <span class="optional">(optional)</span></span>
+                  <input type="text" name="timezone">
+                </label>
+              </fieldset>
+
+              <!-- STEP 4 -->
+              <fieldset class="details-card booking-step">
+                <legend class="step-legend"><span class="step-number">4</span><span class="headline-sm">Your details</span></legend>
+                <div class="form-row">
+                  <label>Full name
+                    <input type="text" name="name" required autocomplete="name">
+                  </label>
+                  <label>Email address
+                    <input type="email" name="email" required autocomplete="email">
+                  </label>
+                </div>
+                <div class="form-row">
+                  <label><span>Phone or WhatsApp number <span class="optional">(with country code)</span></span>
+                    <input type="tel" name="phone" required autocomplete="tel" placeholder="+254 ...">
+                  </label>
+                  <label>Country
+                    <input type="text" name="country" required autocomplete="country-name">
+                  </label>
+                </div>
+                <div class="form-row">
+                  <label><span>County or city <span class="optional">(optional)</span></span>
+                    <input type="text" name="city" autocomplete="address-level2">
+                  </label>
+                  <label><span>Organisation <span class="optional">(optional)</span></span>
+                    <input type="text" name="organisation" autocomplete="organization">
+                  </label>
+                </div>
+
+                <div class="group-fields" data-step-group hidden>
+                  <p class="field-title">About your group</p>
+                  <div class="form-row">
+                    <label>Number of people in the group
+                      <input type="number" name="group_size" min="1">
+                    </label>
+                    <label>Location of the event
+                      <input type="text" name="event_location">
+                    </label>
+                  </div>
+                  <label>Purpose or challenge
+                    <input type="text" name="purpose" placeholder="For example: conflict in a committee, public participation forum, team retreat">
+                  </label>
+                </div>
+
+                <!-- TODO: add Giriama if offered -->
+                <p class="field-title">Preferred language</p>
+                <div class="choice-grid">
+                  <label class="choice"><input type="radio" name="language" value="English" checked><span>English</span></label>
+                  <label class="choice"><input type="radio" name="language" value="Kiswahili"><span>Kiswahili</span></label>
+                </div>
+              </fieldset>
+
+              <!-- STEP 5 -->
+              <fieldset class="details-card booking-step">
+                <legend class="step-legend"><span class="step-number">5</span><span class="headline-sm">Tell me more</span></legend>
+                <label>Your message
+                  <span class="field-hint">What would you like help with, or what would you like to learn?</span>
+                  <textarea name="message" required></textarea>
+                </label>
+                <label>How did you hear about Emmanuel?
+                  <select name="heard">
+                    <option value="" selected>Choose one</option>
+                    <option>Facebook</option>
+                    <option>LinkedIn</option>
+                    <option>YouTube</option>
+                    <option>WhatsApp</option>
+                    <option>A friend or colleague</option>
+                    <option>Deep Democracy Kenya</option>
+                    <option>Other</option>
+                  </select>
+                </label>
+                <label class="check-label">
+                  <input type="checkbox" name="consent" required>
+                  <span>I agree to be contacted about my request. My details will not be shared with anyone else.</span>
+                </label>
+
+                <p class="form-error" role="alert" data-booking-error hidden>Please fill in the highlighted fields.</p>
+
+                <button type="submit" class="btn has-before">
+                  <ion-icon name="calendar-outline"></ion-icon>
+                  <span class="span title-md">Request appointment</span>
+                </button>
+              </fieldset>
+
+            </form>
+
+            <!-- TODO: confirm reply time ("two working days") -->
+            <div class="details-card form-thanks booking-thanks" role="status" data-booking-thanks hidden tabindex="-1">
+              <ion-icon name="checkmark-circle-outline" aria-hidden="true"></ion-icon>
+              <div>
+                <h2 class="headline-sm">Thank you, <span data-thanks-name></span>.</h2>
+                <p>Your request has been received. Emmanuel will contact you within two working days by email or WhatsApp to confirm your appointment.</p>
+                <p>For urgent matters, call or WhatsApp <a href="tel:+254710350828" class="inline-link">+254 710 350 828</a>.</p>
+              </div>
             </div>
-            <p class="text">Dr Uday Devgan ophthalmologist treated my mother very well. 
-                He gave the correct diagnosis. And explained to us in detail. 
-                The whole operation process and insurance process is smooth.</p>
-        </div>
 
-        <div class="box">
-            <img src="./assets/images/pic-2.png" alt="1">
-            <h3>Divya Gupta</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
+          </div>
+
+          <aside class="message-aside booking-aside">
+
+            <div class="details-card" data-reveal="right">
+              <div class="card-icon"><ion-icon name="information-circle-outline" aria-hidden="true"></ion-icon></div>
+              <h2 class="headline-sm">Good to know</h2>
+              <!-- TODO: Payment: [M-Pesa, bank transfer, PayPal]; confirm the "24 hours" notice period -->
+              <ul class="ward-list">
+                <li class="about-item"><ion-icon name="checkmark-circle-outline"></ion-icon><span class="span">The introductory call is free. Fees for classes, coaching and facilitation are confirmed before booking.</span></li>
+                <li class="about-item"><ion-icon name="checkmark-circle-outline"></ion-icon><span class="span">To change or cancel, please let us know at least 24 hours before.</span></li>
+                <li class="about-item"><ion-icon name="checkmark-circle-outline"></ion-icon><span class="span">For Marafa Ward matters, please use the <a href="conntact.html" class="inline-link">Contact page</a>.</span></li>
+              </ul>
             </div>
-            <p class="text">It's very well mannered staff good coordination with patients. 
-                Dr Shree Kumar Reddy assisted very well and took good care of patients. 
-                Overall experience is satisfactory.</p>
-        </div>
 
-        <div class="box">
-            <img src="./assets/images/pic-3.png" alt="3">
-            <h3>Ramesh Jain</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
+            <div class="details-card healing-card" data-reveal="right">
+              <div class="card-icon"><ion-icon name="time-outline" aria-hidden="true"></ion-icon></div>
+              <h2 class="headline-sm">East Africa Time</h2>
+              <p>All times are in East Africa Time (EAT, UTC+3).</p>
+              <ul class="contact-lines">
+                <li><strong>Phone and WhatsApp</strong><a href="tel:+254710350828">+254 710 350 828</a></li>
+                <li><strong>Email</strong><a href="mailto:magarini.centre@gmail.com">magarini.centre@gmail.com</a></li>
+              </ul>
             </div>
-            <p class="text">Since long i was suffering from blood in cough but no doctor except Dr.Vijay kumar chennam chetty identified my problem and started the diagnosis. 
-              </p>
+
+          </aside>
+
         </div>
+      </section>
 
-    </div>
-
-</section>
     </article>
   </main>
+
+  <script>
+    // Booking form: show steps that apply, pre-fill from the link, open the visitor's email app on submit
+    (function () {
+      var TO = "magarini.centre@gmail.com";
+      var CLASS_TYPES = ["Class registration", "Private class for my organisation"];
+      var GROUP_TYPES = ["Facilitation (large group)", "Facilitation (small group or team)",
+        "Community development consulting", "Speaking or training invitation", "Private class for my organisation"];
+
+      var form = document.querySelector("[data-booking-form]");
+      var type = form.querySelector("[data-booking-type]");
+      var stepClass = form.querySelector("[data-step-class]");
+      var stepGroup = form.querySelector("[data-step-group]");
+      var classSelect = form.querySelector("[data-class-select]");
+      var unsure = form.querySelector("[data-class-unsure]");
+      var error = form.querySelector("[data-booking-error]");
+
+      function update() {
+        var showClass = CLASS_TYPES.indexOf(type.value) !== -1;
+        stepClass.hidden = !showClass;
+        stepClass.disabled = !showClass;
+        stepGroup.hidden = GROUP_TYPES.indexOf(type.value) === -1;
+        classSelect.required = !unsure.checked;
+        classSelect.disabled = unsure.checked;
+      }
+      type.addEventListener("change", update);
+      unsure.addEventListener("change", update);
+
+      // dates cannot be in the past
+      var today = new Date();
+      today.setMinutes(today.getMinutes() - today.getTimezoneOffset());
+      form.querySelectorAll("[data-date]").forEach(function (d) { d.min = today.toISOString().slice(0, 10); });
+
+      // pre-fill from links such as appointment.html?type=Class%20registration&class=Leadership
+      var params = new URLSearchParams(window.location.search);
+      [[type, params.get("type")], [classSelect, params.get("class")]].forEach(function (pair) {
+        if (!pair[1]) return;
+        [].some.call(pair[0].options, function (opt) {
+          if (opt.text === pair[1]) { pair[0].value = opt.value || opt.text; return true; }
+        });
+      });
+      update();
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        if (!form.checkValidity()) {
+          form.classList.add("was-validated");
+          error.hidden = false;
+          var first = form.querySelector(":invalid");
+          if (first) first.focus();
+          return;
+        }
+        error.hidden = true;
+        var d = new FormData(form);
+        function v(key) { return d.get(key) || "-"; }
+        var lines = [
+          "Type of appointment: " + v("type")
+        ];
+        if (!stepClass.hidden) lines.push("Class: " + (unsure.checked ? "Not sure, please advise" : v("class")));
+        lines.push(
+          "How to meet: " + v("meet"),
+          "Preferred date: " + v("date") + " (" + v("time") + ")",
+          "Alternative date: " + v("date_alt"),
+          "Country and time zone (if outside Kenya): " + v("timezone"),
+          "",
+          "Name: " + v("name"),
+          "Email: " + v("email"),
+          "Phone or WhatsApp: " + v("phone"),
+          "Country: " + v("country"),
+          "County or city: " + v("city"),
+          "Organisation: " + v("organisation")
+        );
+        if (!stepGroup.hidden) lines.push(
+          "Number of people: " + v("group_size"),
+          "Location of the event: " + v("event_location"),
+          "Purpose or challenge: " + v("purpose")
+        );
+        lines.push(
+          "Preferred language: " + v("language"),
+          "Heard about Emmanuel via: " + v("heard"),
+          "",
+          v("message")
+        );
+        window.location.href = "mailto:" + TO +
+          "?subject=" + encodeURIComponent("Appointment request: " + v("type")) +
+          "&body=" + encodeURIComponent(lines.join("\n"));
+
+        document.querySelector("[data-thanks-name]").textContent = d.get("name");
+        form.hidden = true;
+        var thanks = document.querySelector("[data-booking-thanks]");
+        thanks.hidden = false;
+        thanks.focus();
+      });
+    })();
+  </script>
 
 
 
@@ -289,8 +532,12 @@
     <div class="container">
       <div class="section footer-top">
         <div class="footer-brand" data-reveal="bottom">
-          <a href="#" class="logo">
-            <img src="./assets/images/ZARA_LOGO_with_Text.png" width="136" height="46" loading="lazy" alt="Emmanuel Karisa Baya home">
+          <a href="index.html" class="logo brand" aria-label="Emmanuel Baya, Kila Sauti, Every Voice: home">
+            <span class="brand-mark"><img src="./assets/images/emmanuel-baya-logo-light.png" width="52" height="52" alt="" loading="lazy"></span>
+            <span class="brand-text">
+              <span class="brand-name">Emmanuel Baya</span>
+              <span class="brand-tag">KILA SAUTI · EVERY VOICE</span>
+            </span>
           </a>
           <ul class="contact-list has-after">
             <li class="contact-item">
