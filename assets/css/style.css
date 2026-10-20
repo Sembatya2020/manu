@@ -2438,6 +2438,9 @@ Product */
   line-height: 1.15;
 }
 
+/* About page hero has no small label above the headline */
+.hero-content > .about-hero-title:first-child { margin-block-start: 0; }
+
 .story-tabs { margin-block-start: 25px; }
 
 .story-tabs .tab-btn { cursor: pointer; }
@@ -3055,4 +3058,93 @@ Product */
 .footer .brand-mark {
   width: 100px;
   height: 100px;
+}
+
+
+/*-----------------------------------*\
+  #FOOTER POLISH (columns and bottom bar)
+\*-----------------------------------*/
+
+.footer-list-title {
+  position: relative;
+  padding-block-end: 12px;
+}
+
+.footer-list-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 36px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: var(--verdigris);
+}
+
+.footer .footer-list .text {
+  opacity: 0.8;
+  line-height: 1.7;
+}
+
+.footer-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-block-start: 15px;
+  color: var(--verdigris);
+  font-weight: var(--fw-700);
+  transition: var(--transition-1);
+}
+
+.footer-more ion-icon { transition: var(--transition-1); }
+
+.footer-more:is(:hover, :focus-visible) { color: var(--white); }
+
+.footer-more:is(:hover, :focus-visible) ion-icon { transform: translateX(4px); }
+
+.footer-icon-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.footer-icon-line ion-icon {
+  flex-shrink: 0;
+  margin-block-start: 4px;
+  color: var(--verdigris);
+  font-size: 2rem;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-block-start: 12px;
+}
+
+.footer-social-link ion-icon {
+  color: var(--verdigris);
+  font-size: 2rem;
+}
+
+/* first social link lines up with the first line of the other columns */
+.footer-list li:nth-child(2) > .footer-social-link { margin-block-start: 0; }
+
+.footer-bottom-pro .copyright {
+  font-size: 1.4rem;
+  line-height: 1.7;
+}
+
+@media (min-width: 768px) {
+  /* keep the round social icons clear of the back-to-top button */
+  .footer-bottom-pro .social-list { margin-inline-end: 80px; }
+}
+
+@media (min-width: 1200px) {
+  .footer-top {
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    column-gap: 50px;
+  }
+
+  .footer-col-about { padding-inline-end: 20px; }
 }
