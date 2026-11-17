@@ -426,16 +426,49 @@ body.nav-active { overflow: hidden; }
 .hero-banner { display: none; }
 
 .hero {
+  position: relative;
   background-color: var(--midnight-green);
   --section-padding: 200px;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0)),
+    radial-gradient(circle at 20% 12%, rgba(255,255,255,0.12), transparent 32%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255,255,255,0.08) 0,
+      rgba(255,255,255,0.08) 2px,
+      transparent 2px,
+      transparent 18px
+    );
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.hero > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  max-width: 680px;
 }
 
 .hero-subtitle {
   color: var(--white);
   font-weight: var(--fw-500);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 1.4rem;
   padding-inline-start: 80px;
+  opacity: 0.9;
 }
 
 .hero-subtitle::before {
@@ -443,22 +476,92 @@ body.nav-active { overflow: hidden; }
   left: 0;
   width: 60px;
   height: 1px;
-  background-color: var(--white);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
-.hero-title { margin-block: 20px 30px; }
+.hero-title {
+  margin-block: 20px 30px;
+  font-size: clamp(5rem, 10vw, 12rem);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  max-width: 620px;
+}
 
 .hero-card {
-  background-color: var(--white);
-  border-radius: var(--radius-12);
-  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 18px;
+  padding: 22px 24px 18px;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.12);
+  max-width: 700px;
 }
 
 .hero-card .card-text {
   color: var(--eerie-black);
-  border-block-end: 1px solid var(--midnight-green_a25);
-  padding-block-end: 12px;
+  border-block-end: 1px solid rgba(10, 76, 82, 0.18);
+  padding-block-end: 14px;
   margin-block-end: 14px;
+  font-size: clamp(1.8rem, 2vw, 2.8rem);
+  line-height: 1.4;
+}
+
+.hero-card-note {
+  color: rgba(13, 51, 58, 0.8);
+  font-size: 1.5rem;
+  opacity: 0.9;
+}
+
+.inline-link {
+  color: var(--verdigris);
+  font-weight: var(--fw-700);
+}
+
+.hero .wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-block-start: 22px;
+  align-items: stretch;
+}
+
+.hero .wrapper .btn {
+  width: 100%;
+  min-width: 0;
+  justify-content: center;
+  padding: 17px 22px;
+  min-height: 64px;
+  border-radius: 14px;
+  box-shadow: 0 12px 22px rgba(8, 53, 60, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.hero .wrapper .btn:is(:hover, :focus-visible) {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 28px rgba(8, 53, 60, 0.18);
+}
+
+.appointment-banner {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 28px;
+}
+
+.appointment-banner img {
+  width: min(100%, 420px);
+  filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.18));
+}
+
+.hero-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-banner img {
+  width: min(100%, 560px);
+  max-height: 520px;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 32px rgba(0, 0, 0, 0.16));
 }
 
 .hero-card .input-wrapper { position: relative; }
@@ -480,7 +583,7 @@ body.nav-active { overflow: hidden; }
 .hero-card .btn {
   width: 100%;
   justify-content: center;
-  margin-block-start: 16px;
+  margin-block-start: 0;
 }
 
 
@@ -660,6 +763,12 @@ body.nav-active { overflow: hidden; }
 .quote-author {
   color: var(--verdigris);
   margin-block-start: 20px;
+}
+
+@media (max-width: 767px) {
+  .hero .wrapper {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (min-width: 768px) {
@@ -947,7 +1056,8 @@ body.nav-active { overflow: hidden; }
   .hero-title { line-height: 1.125; }
 
   .hero .wrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
   }
 
@@ -3147,4 +3257,129 @@ Product */
   }
 
   .footer-col-about { padding-inline-end: 20px; }
+}
+
+
+/*-----------------------------------*\
+  #CLEAN LABELS AND SMOOTH PAGE SWITCHING
+\*-----------------------------------*/
+
+/* small labels above headlines: no decorative line */
+.hero-subtitle { padding-inline-start: 0; }
+
+.hero-subtitle::before { display: none; }
+
+/* cross-fade between pages (Chrome, Edge, Safari 18+); the header stays still */
+@view-transition { navigation: auto; }
+
+.header { view-transition-name: site-header; }
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) { animation: none !important; }
+}
+
+
+/*-----------------------------------*\
+  #HEADER AND HERO BALANCE
+\*-----------------------------------*/
+
+/* "Get Appointment" in the menu (was an inline style) */
+.nav-cta {
+  background-color: var(--verdigris);
+  border-radius: var(--radius-6);
+}
+
+/* small label above each headline, styled like the logo tagline */
+.hero-subtitle {
+  color: hsl(197, 79%, 65%);
+  font-size: 1.3rem;
+  font-weight: var(--fw-700);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1200px) {
+
+  /* logo about 15% smaller so it balances the menu */
+  .header .brand-mark {
+    width: 72px;
+    height: 72px;
+    margin-block: -8px;
+  }
+
+  .header .brand-name { font-size: 2.2rem; }
+
+  .header .brand-tag { font-size: 1rem; }
+
+  /* menu links: a little larger and bolder, evenly spaced */
+  .navbar-list {
+    align-items: center;
+    gap: 4px;
+  }
+
+  .navbar-link {
+    --title-md: 1.85rem;
+    position: relative;
+    font-weight: var(--fw-700);
+    padding: 8px 14px;
+  }
+
+  /* light-blue underline for hover and the current page */
+  .navbar-link:not(.nav-cta)::after {
+    content: "";
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 2px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: hsl(197, 79%, 65%);
+    transform: scaleX(0);
+    transition: var(--transition-1);
+  }
+
+  .navbar-link:not(.nav-cta):is(:hover, :focus-visible)::after,
+  .navbar-link[aria-current="page"]:not(.nav-cta)::after { transform: scaleX(1); }
+
+  .navbar-link[aria-current="page"]:not(.nav-cta) { color: hsl(197, 79%, 65%); }
+
+  /* slimmer button: same height as the links */
+  .navbar-link.nav-cta {
+    margin-inline-start: 10px;
+    padding: 8px 20px;
+    transition: var(--transition-1);
+  }
+
+  .navbar-link.nav-cta:is(:hover, :focus-visible),
+  .navbar-link.nav-cta[aria-current="page"] {
+    background-color: var(--white);
+    color: var(--midnight-green);
+  }
+}
+
+@media (min-width: 992px) {
+
+  /* less empty space above the hero so the headline, card and buttons fit on screen */
+  .hero {
+    padding-block-start: 150px;
+    padding-block-end: 110px;
+  }
+
+  .hero .container { align-items: center; }
+
+  /* keep hero pictures within the screen height */
+  .hero-banner img:not(.appointment-banner img) {
+    max-height: min(540px, calc(100vh - 200px));
+    width: auto !important;
+    max-width: 100%;
+    margin-inline: auto;
+  }
 }

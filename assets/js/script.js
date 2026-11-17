@@ -17,17 +17,45 @@ const addEventOnElements = function (elements, eventType, callback) {
 
 
 /**
- * PRELOADER
- * 
- * preloader will be visible until document load
+ * PAGE READY
+ *
+ * no full-screen preloader: the page is usable as soon as it is parsed,
+ * images keep loading in the background
  */
 
 const preloader = document.querySelector("[data-preloader]");
 
-window.addEventListener("load", function () {
-  preloader.classList.add("loaded");
-  document.body.classList.add("loaded");
-});
+if (preloader) preloader.classList.add("loaded");
+document.body.classList.add("loaded");
+
+
+
+/**
+ * FASTER PAGE SWITCHING
+ *
+ * prefetch the other pages when a link is hovered or touched,
+ * so the next page is already downloaded when it is clicked
+ */
+
+if (HTMLScriptElement.supports && HTMLScriptElement.supports("speculationrules")) {
+  const rules = document.createElement("script");
+  rules.type = "speculationrules";
+  rules.textContent = JSON.stringify({
+    prefetch: [{ where: { href_matches: "/*" }, eagerness: "moderate" }]
+  });
+  document.head.appendChild(rules);
+} else {
+  const prefetched = new Set();
+  document.addEventListener("pointerover", function (event) {
+    const link = event.target.closest && event.target.closest("a[href$='.html'], a[href*='.html?'], a[href*='.html#']");
+    if (!link || link.origin !== location.origin || prefetched.has(link.pathname)) return;
+    prefetched.add(link.pathname);
+    const hint = document.createElement("link");
+    hint.rel = "prefetch";
+    hint.href = link.pathname;
+    document.head.appendChild(hint);
+  });
+}
 
 
 
@@ -93,6 +121,19 @@ const revealElementOnScroll = function () {
 
 window.addEventListener("scroll", revealElementOnScroll);
 
-window.addEventListener("load", revealElementOnScroll);
+// reveal what is on screen straight away instead of waiting for every image to load
+revealElementOnScroll();
 
 
+
+
+
+/**
+ * CURRENT PAGE IN THE MENU
+ */
+
+const currentPage = location.pathname.split("/").pop() || "index.html";
+
+document.querySelectorAll(".navbar-link").forEach(function (link) {
+  if (link.getAttribute("href") === currentPage) link.setAttribute("aria-current", "page");
+});
